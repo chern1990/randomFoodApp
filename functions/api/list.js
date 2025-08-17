@@ -3,7 +3,7 @@ import { createClient } from '@supabase/supabase-js';
 export async function onRequest(context) {
   try {
     // Environment variables are available in the context.env object.
-    const SUPABASE_URL = 'https://jxgvetkmajlfijycxecb.supabase.co';
+    const SUPABASE_URL = context.env.SUPABASE_URL;
     const SUPABASE_SERVICE_ROLE_KEY = context.env.SUPABASE_SERVICE_ROLE_KEY;
     console.log(SUPABASE_URL);
     console.log(SUPABASE_SERVICE_ROLE_KEY);
