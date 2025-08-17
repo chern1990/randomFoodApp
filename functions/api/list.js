@@ -5,7 +5,8 @@ export async function onRequest(context) {
     // Environment variables are available in the context.env object.
     const SUPABASE_URL = 'https://jxgvetkmajlfijycxecb.supabase.co';
     const SUPABASE_SERVICE_ROLE_KEY = context.env.SUPABASE_SERVICE_ROLE_KEY;
-
+    console.log(SUPABASE_URL);
+    console.log(SUPABASE_SERVICE_ROLE_KEY);
     // Check if the required environment variables are set.
     if (!SUPABASE_SERVICE_ROLE_KEY) {
       return new Response(JSON.stringify({ error: 'Supabase environment variables are not set.' }), {
