@@ -154,7 +154,6 @@
 
     <script>
         // --- Page Logic (JavaScript) ---
-        // require('dotenv').config();
 
         // Get references to all the HTML elements we need
         const itemInput = document.getElementById('item-input');
@@ -170,10 +169,11 @@
         const SUPABASE_URL = 'https://jxgvetkmajlfijycxecb.supabase.co'; 
         const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imp4Z3ZldGttYWpsZmlqeWN4ZWNiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTU0MzU4MjEsImV4cCI6MjA3MTAxMTgyMX0.hjQOoLC3rwgZ96D-oRoY3x3JBhthsoWzvtYfXtstFa4';
         // const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+        // console.log(process.env.TESTKEY);
 
         // Initialize the Supabase client
         const { createClient } = supabase;
-        const dbClient = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY);
+        const dbClient = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
         // This array will be our local cache of the data from Supabase
         let items = [];
